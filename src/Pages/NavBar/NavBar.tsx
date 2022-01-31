@@ -3,8 +3,6 @@ import * as React from "react";
 import {
     Box,
     Flex,
-    Avatar,
-    Link,
     Button,
     Menu,
     MenuButton,
@@ -14,20 +12,20 @@ import {
     useDisclosure,
     useColorModeValue,
     Stack,
-    useColorMode,
     Center,
+    Text
   } from '@chakra-ui/react';
-import { ColorModeSwitcher } from "../ColorModeSwitcher"
+import { ColorModeSwitcher } from "../../ColorModeSwitcher"
   
 export const NavBar = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
+    // const { isOpen, onOpen, onClose } = useDisclosure();
     return (
       <>
-        <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+        <Box bgColor={useColorModeValue('gray.100', 'gray.900')} px={4} position='fixed' w='100%' zIndex={}>
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-            <Box>
+            <Text fontSize='3xl' fontWeight={'semibold'}>
                 shortnd.io
-            </Box>
+            </Text>
             <Flex alignItems={'center'}>
               <Stack direction={'row'} spacing={3}>
               <ColorModeSwitcher justifySelf="flex-end" />
